@@ -1,0 +1,3 @@
+﻿H:\SOFTWARE\Microsoft Visual Studio 2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (pl_szkielet_01_win.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  shaderprogram.cpp
+  pl_szkielet_01_win.vcxproj -> H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.exe

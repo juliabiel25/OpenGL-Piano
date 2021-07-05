@@ -1,0 +1,8 @@
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\current_model_loading_project\Debug\pl_szkielet_01_win.exe
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\current_model_loading_project\Debug\pl_szkielet_01_win.pdb
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\model_loading_test\Debug\pl_szkielet_01_win.exe
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\model_loading_test\Debug\pl_szkielet_01_win.pdb
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\separate_objs_for_parts\Debug\pl_szkielet_01_win.exe
+H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\separate_objs_for_parts\Debug\pl_szkielet_01_win.pdb
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.exe
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.pdb
