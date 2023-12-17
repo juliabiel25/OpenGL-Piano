@@ -1,7 +1,7 @@
 # OpenGL-Piano
  An OpenGL implementation of an interactive 3D piano model (with the inner key mechanism)
 
- ![screenshot of the piano model implemented in OpenGL]([http://url/to/img.png](https://github.com/juliabiel25/OpenGL-Piano/blob/main/piano.png?raw=true))
+ ![screenshot of the piano model implemented in OpenGL](https://github.com/juliabiel25/OpenGL-Piano/blob/main/piano.png?raw=true))
 
 # How to run
 
