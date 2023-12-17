@@ -1,3 +1,40 @@
-﻿H:\SOFTWARE\Microsoft Visual Studio 2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: Katalog pośredni (Debug\) zawiera pliki udostępnione z innego projektu (pl_szkielet_01_win.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+﻿H:\SOFTWARE\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (pl_szkielet_01_win.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main_file.cpp
+H:\_PROJEKTY\OpenGL-Piano\mesh.h(322,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(63,35): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(78,35): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(153,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(163,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(172,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(250,27): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\model.h(455,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main_file.cpp')
+  
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(134,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(328,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(329,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(333,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(334,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(338,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_PROJEKTY\OpenGL-Piano\main_file.cpp(339,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
   shaderprogram.cpp
-  pl_szkielet_01_win.vcxproj -> H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.exe
+  Generating Code...
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(SOIL2.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_DXT.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(image_helper.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(image_helper.obj)' or at ''; linking object as if no debug info
+soil2-debug.lib(wfETC.obj) : warning LNK4099: PDB '' was not found with 'soil2-debug.lib(wfETC.obj)' or at ''; linking object as if no debug info
+  pl_szkielet_01_win.vcxproj -> H:\_PROJEKTY\OpenGL-Piano\Debug\PIANO.exe

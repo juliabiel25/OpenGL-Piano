@@ -31,7 +31,7 @@ public:
     // constructor - load all models linked by paths
     Model(vector<string> paths)
     {
-        this->loadModel(paths);
+        this->import(paths);
     }
 
     // draw each mesh within the model class using shader program
@@ -44,14 +44,18 @@ public:
         }
     }
 
-    void openLid(GLuint ID, GLfloat angle)
+    void openLid()
     {
         cout << "Model::openLid \n";
+        this->meshes[meshes.size() - 4].isFalling = false;
+        this->meshes[meshes.size() - 4].isRising = true;
     }
 
-    void closeLid(GLuint ID, GLfloat angle)
+    void closeLid()
     {
         cout << "Model::closeLid\n";
+        this->meshes[meshes.size() - 4].isFalling = true;
+        this->meshes[meshes.size() - 4].isRising = false;
     }
 
     void rotateMesh(int meshID, glm::vec3 rotation)
@@ -145,10 +149,30 @@ private:
     // debugging: print the name of each loaded mesh
     void checkMeshes()
     {
-        cout << "Contents of <meshes>:\n";
+        cout << "\nContents of <meshes>:\n\n";
         for (int i = 0; i < meshes.size(); i++)
         {
             cout << i << ": " << meshes[i].getName() << endl;
+        }
+    }
+
+    // debugging: print the name of each loaded element prototype
+    void checkElements()
+    {
+        cout << "\nContents of <elements>:\n\n";
+        for (int i = 0; i < elements.size(); i++)
+        {
+            cout << i << ": " << elements[i].getName() << endl;
+        }
+    }
+
+    void checkElementTextures()
+    {
+        cout << "\nChecking imported textures:\n\n";
+        for (int i = 0; i < elements.size(); i++)
+        {
+            cout << "Element " << i << " - " << this->elements[i].getName() << ":\n";
+            this->elements[i].printTexturesInfo();
         }
     }
 
@@ -167,6 +191,7 @@ private:
         this->elements[8].setPosition(glm::vec3(-0.816625f, 0.924906f, 0.797623f)); // top bar
         this->elements[9].setPosition(glm::vec3(-0.816625f, 0.872364f, 0.809503f)); // cylinder
         this->elements[10].setPosition(glm::vec3(-0.816625f, 0.843621f, 0.66461f)); // bottom holder
+        this->elements[14].setPosition(glm::vec3(-0.941528f, 1.11161f, 0.090819f)); // piano lid
     }
 
     // Set Rotation limits for the mobile parts of the key
@@ -183,6 +208,7 @@ private:
             this->elements[5].setRotationLimit(-3.04f); // wippen
             this->elements[6].setRotationLimit(2.5f);   // repetition_lever
             this->elements[7].setRotationLimit(11.6f);  // jack
+            this->elements[14].setRotationLimit(45.0f);  // piano lid
            
         }
         else {
@@ -193,7 +219,7 @@ private:
     // set the names for each prototype element (for easier mesh loading debugging)
     void setElementNames() 
     {
-        if (this->elements.size() >= 11) // 11 is the number of all prototype elements in a key
+        if (this->elements.size() >= 15) // 11 is the number of all prototype elements in a key
         {
             this->elements[0].setName("key_base_black");
             this->elements[1].setName("key_base_white01");
@@ -206,6 +232,11 @@ private:
             this->elements[8].setName("key_top_bar");
             this->elements[9].setName("key_jack_cylinder");
             this->elements[10].setName("key_bottom_handle");
+            this->elements[11].setName("inner_piano_body");
+            this->elements[12].setName("strings");
+            this->elements[13].setName("piano_body");
+            this->elements[14].setName("lid");
+            this->elements[15].setName("floor");
         }
         else {
             cout << "Model::setElementRotationLimits: elements not loaded properly\n";
@@ -400,10 +431,19 @@ private:
     }
 
 
-    // Loads a model with supported ASSIMP extensions from an .obj file and stores the resulting meshes in the <meshes> vector.
-    void loadModel(vector<string> paths)
+    void addPianoBody()
     {
-        cout << "model::loadModel() initiated\n";
+        // <elements>: 11-15 - piano body (+ the floor) meshes
+        for (int i = 11; i <= 15; i++)
+        {
+            this->meshes.push_back(elements[i]);
+        }
+    }
+
+    // Loads .obj models using ASSIMP and stores the resulting meshes in the <meshes> vector.
+    void import(vector<string> paths)
+    {
+        cout << "model::import() initiated\n";
 
         // Define an ASSIMP importer object
         Assimp::Importer importer;
@@ -428,8 +468,8 @@ private:
 
             // Process ASSIMP's root node recursively
             this->processNode(scenes[i]->mRootNode, scenes[i]);
-        }
-
+        }                 
+        
         // after loading all prototype elements - do all the neccessary updates
         updateElementPositions();
         setElementRotationLimits();
@@ -443,6 +483,21 @@ private:
 
         // check the order of the loaded meshes
         checkMeshes();
+
+        // check the content of <elements>
+        checkElements();
+
+        // check loaded textures
+        checkElementTextures();
+
+        // draw the rest of the piano
+        addPianoBody();
+
+        // add cubes in light source positions
+        this->meshes.push_back(this->elements[16]);
+        this->meshes[this->meshes.size() - 1].setPosition(glm::vec3(2.5, -0.5, 2.2));
+        this->meshes.push_back(this->elements[16]);
+        this->meshes[this->meshes.size() - 1].setPosition(glm::vec3(-2.5, 0.5, -2.2));
          
     }
 
@@ -484,7 +539,7 @@ private:
         for (GLuint i = 0; i < mesh->mNumVertices; i++)
         {
             Vertex vertex;
-            glm::vec3 vector; // placeholder vector for ASSIMP -> glm type conversion
+            glm::vec3 vector; // placeholder vector for ASSIMP::vec3 -> glm::vec3 type conversion
 
             // positions
             vector.x = mesh->mVertices[i].x;
@@ -501,7 +556,7 @@ private:
             }
 
             // texture coordinates
-            if (mesh->mTextureCoords[0]) // check if mesh has texCoords
+            if (mesh->mTextureCoords[0]) // check if mesh has any texCoords
             {
                 glm::vec2 vec;
                 vec.x = mesh->mTextureCoords[0][i].x;
@@ -531,24 +586,19 @@ private:
         if (mesh->mMaterialIndex >= 0)
         {
             aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-            // We assume a convention for sampler names in the shaders. Each diffuse texture should be named
-            // as 'texture_diffuseN' where N is a sequential number ranging from 1 to MAX_SAMPLER_NUMBER.
-            // Same applies to other texture as the following list summarizes:
-            // Diffuse: texture_diffuseN
-            // Specular: texture_specularN
-            // Normal: texture_normalN
-
-            // 1. Diffuse maps
+            // Diffuse maps
             vector<Texture> diffuseMaps = this->loadMaterialTextures(material, aiTextureType_DIFFUSE, "texture_diffuse");
             textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
 
-            // 2. Specular maps
+            // Specular maps
             vector<Texture> specularMaps = this->loadMaterialTextures(material, aiTextureType_SPECULAR, "texture_specular");
             textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
 
-            // 3. Normal maps?
+            /* maybe later?
+            // Normal maps?
             vector<Texture> normalMaps = this->loadMaterialTextures(material, aiTextureType_HEIGHT, "texture_normal");
             textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+            */
         }
 
         // Return a mesh constructor using the retrieved data
@@ -556,45 +606,42 @@ private:
     }
 
 
-    // TUTAJ SKOÑCZY£AM U£ADNIANIE KODU XD  //  
 
-
-
-
-    // Checks all material textures of a given type and loads the textures if they're not loaded yet.
-    // The required info is returned as a Texture struct.
-    vector<Texture> loadMaterialTextures(aiMaterial* mat, aiTextureType type, string typeName)
+    // loads the textures that have not yet been loaded into a <textures> vector
+    vector<Texture> loadMaterialTextures(aiMaterial* mat, aiTextureType type, string texType)
     {
         vector<Texture> textures;
 
+        // for each texture of a particular type (diffuse, specular, normal):
         for (GLuint i = 0; i < mat->GetTextureCount(type); i++)
         {
-            aiString str;
-            mat->GetTexture(type, i, &str);
+            aiString path;
+            mat->GetTexture(type, i, &path); // gets the texture path
 
             // Check if texture was loaded before and if so, continue to next iteration: skip loading a new texture
-            GLboolean skip = false;
+            GLboolean loaded = false;
 
             for (GLuint j = 0; j < textures_loaded.size(); j++)
             {
-                if (textures_loaded[j].path == str)
+                //cout << textures_loaded[j].path.C_Str() << " == " << path.C_Str() << endl;
+                if (textures_loaded[j].path == path)
                 {
                     textures.push_back(textures_loaded[j]);
-                    skip = true; // A texture with the same filepath has already been loaded, continue to next one. (optimization)
+                    loaded = true; // A texture with the same filepath has already been loaded, continue to next one. (optimization)
 
                     break;
                 }
             }
 
-            if (!skip)
-            {   // If texture hasn't been loaded already, load it
+            if (!loaded)
+            {   // If texture hasn't been loaded yet, load it
                 Texture texture;
-                texture.id = TextureFromFile(str.C_Str(), this->directory);
-                texture.type = typeName;
-                texture.path = str;
-                textures.push_back(texture);
+                texture.id = TextureFromFile(path.C_Str(), this->directory);
+                texture.type = texType;
+                texture.path = path;
 
-                this->textures_loaded.push_back(texture);  // Store it as texture loaded for entire model, to ensure we won't unnecesery load duplicate textures.
+                textures.push_back(texture);
+                this->textures_loaded.push_back(texture); 
             }
         }
 
@@ -614,7 +661,7 @@ GLint TextureFromFile(const char* path, string directory)
 
     unsigned char* image = SOIL_load_image(filename.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
 
-    // Assign texture to ID
+    // Assign texture to texturing unit (by texID)
     glBindTexture(GL_TEXTURE_2D, textureID);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     glGenerateMipmap(GL_TEXTURE_2D);
@@ -624,6 +671,8 @@ GLint TextureFromFile(const char* path, string directory)
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+   
+    //reset
     glBindTexture(GL_TEXTURE_2D, 0);
     SOIL_free_image_data(image);
 

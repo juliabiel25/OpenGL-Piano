@@ -1,0 +1,36 @@
+# Blender MTL File: 'piano_body_booleaned_export.blend'
+# Material Count: 3
+
+newmtl body
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ..\textures\metal2.jpg
+map_Ks ..\textures\metal2_specular.jpg
+
+newmtl inner_body
+Ns 216.510205
+Ka 1.000000 1.000000 1.000000
+Kd 0.400332 0.800000 0.208407
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd ..\textures\plywood.jpg
+
+newmtl strings
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd ..\textures\white.png

@@ -1,61 +1,15 @@
-﻿main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glBindTexture przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glClear przywołany w funkcji "void __cdecl drawScene(struct GLFWwindow *,float)" (?drawScene@@YAXPEAUGLFWwindow@@M@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glClearColor przywołany w funkcji "void __cdecl initOpenGLProgram(struct GLFWwindow *)" (?initOpenGLProgram@@YAXPEAUGLFWwindow@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glEnable przywołany w funkcji "void __cdecl initOpenGLProgram(struct GLFWwindow *)" (?initOpenGLProgram@@YAXPEAUGLFWwindow@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glGenTextures przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glTexImage2D przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glTexParameteri przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp_glewInit przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwInit przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwTerminate przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwSetErrorCallback przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwCreateWindow przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwDestroyWindow przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwWindowShouldClose przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwPollEvents przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwSetKeyCallback przywołany w funkcji "void __cdecl initOpenGLProgram(struct GLFWwindow *)" (?initOpenGLProgram@@YAXPEAUGLFWwindow@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwGetTime przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwSetTime przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwMakeContextCurrent przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwSwapBuffers przywołany w funkcji "void __cdecl drawScene(struct GLFWwindow *,float)" (?drawScene@@YAXPEAUGLFWwindow@@M@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny glfwSwapInterval przywołany w funkcji main
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny SOIL_load_image przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny SOIL_free_image_data przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewBindBuffer przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewBufferData przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGenBuffers przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewAttachShader przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewAttachShader
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewCompileShader przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewCompileShader
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewCreateProgram przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewCreateProgram
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewCreateShader przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewCreateShader
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewDeleteShader przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewDeleteShader
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewEnableVertexAttribArray przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetProgramInfoLog przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewGetProgramInfoLog
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetProgramiv przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewGetProgramiv
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetShaderInfoLog przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewGetShaderInfoLog
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetShaderiv przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewGetShaderiv
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewLinkProgram przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewLinkProgram
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewShaderSource przywołany w funkcji "public: __cdecl Shader::Shader(char const *,char const *)" (??0Shader@@QEAA@PEBD0@Z)
-shaderprogram.obj : error LNK2001: nierozpoznany symbol zewnętrzny __imp___glewShaderSource
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewVertexAttribPointer przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGenerateMipmap przywołany w funkcji "int __cdecl TextureFromFile(char const *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?TextureFromFile@@YAHPEBDV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewBindVertexArray przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-main_file.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGenVertexArrays przywołany w funkcji "private: void __cdecl Mesh::setupMesh(void)" (?setupMesh@Mesh@@AEAAXXZ)
-shaderprogram.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewDeleteProgram przywołany w funkcji "public: __cdecl ShaderProgram::~ShaderProgram(void)" (??1ShaderProgram@@QEAA@XZ)
-shaderprogram.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewDetachShader przywołany w funkcji "public: __cdecl ShaderProgram::~ShaderProgram(void)" (??1ShaderProgram@@QEAA@XZ)
-shaderprogram.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetAttribLocation przywołany w funkcji "public: unsigned int __cdecl ShaderProgram::a(char const *)" (?a@ShaderProgram@@QEAAIPEBD@Z)
-shaderprogram.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewGetUniformLocation przywołany w funkcji "public: unsigned int __cdecl ShaderProgram::u(char const *)" (?u@ShaderProgram@@QEAAIPEBD@Z)
-shaderprogram.obj : error LNK2019: nierozpoznany symbol zewnętrzny __imp___glewUseProgram przywołany w funkcji "public: void __cdecl ShaderProgram::use(void)" (?use@ShaderProgram@@QEAAXXZ)
-glew\lib\glew32.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x86” z typem maszyny docelowej „x64”
-glfw\lib\glfw3.lib : warning LNK4272: wystąpił konflikt typu maszyny biblioteki „x86” z typem maszyny docelowej „x64”
-H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\current_model_loading_project\x64\Debug\pl_szkielet_01_win.exe : fatal error LNK1120: liczba nierozpoznanych elementów zewnętrznych: 47
+﻿  main_file.cpp
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\mesh.h(253,56): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  (compiling source file 'main_file.cpp')
+  
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(134,30): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(328,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(329,17): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(333,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(334,21): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(338,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\main_file.cpp(339,13): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+  shaderprogram.cpp
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\shaderprogram.cpp(51,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'assimp-vc142-mtd.lib'

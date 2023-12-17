@@ -6,3 +6,7 @@ H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimp
 H:\_UNI\semestr IV\[GKiW] Grafika komputerowa i wizualizacja\laboratorium\assimpt_test\separate_objs_for_parts\Debug\pl_szkielet_01_win.pdb
 H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.exe
 H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\separate_objs_for_parts\Debug\PIANO.pdb
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\OpenGL-Piano — kopia\Debug\PIANO.exe
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\OpenGL-Piano — kopia\Debug\PIANO.pdb
+H:\_UNI\semestr_IV\GKiW\laboratorium\assimpt_test\gkiw_145285\Debug\PIANO.exe
+H:\_PROJEKTY\OpenGL-Piano\Debug\PIANO.exe
