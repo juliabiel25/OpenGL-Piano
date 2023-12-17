@@ -13,7 +13,7 @@ Open the .sln file in Visual Studio and run the x86 debugger
 
 - `Middle mouse button` for camera panning
 
-- `NUMPAD numbers` for pressing piano keys (only the 10 keys on the right side have been mapped to keyboard input for the sake of ease of presentation)
+- `NUMPAD numbers` for pressing piano keys (only the 10 far-right keys have been mapped to keyboard input for the sake of ease of presentation)
 
 - `O / C` for opening and closing the piano lid
 
