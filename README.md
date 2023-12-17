@@ -1,6 +1,8 @@
 # OpenGL-Piano
  An OpenGL implementation of an interactive 3D piano model (with the inner key mechanism)
 
+ ![screenshot of the piano model implemented in OpenGL]([http://url/to/img.png](https://github.com/juliabiel25/OpenGL-Piano/blob/main/piano.png?raw=true))
+
 # How to run
 
 Open the .sln file in Visual Studio and run the x86 debugger
